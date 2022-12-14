@@ -1,0 +1,32 @@
+.mat-mdc-card {
+  width: 50vw;
+  height: 53vh;
+
+  .mat-mdc-card-footer {
+    margin-top: auto;
+    padding: 10px;
+  }
+
+  .suggested-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    margin-top: 8px;
+    .suggested-joke {
+      flex: 1;
+      border: 1px solid #999;
+      border-radius: 3px;
+      padding: 5px;
+      width: 0;
+      cursor: pointer;
+      .joke-id {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .suggested-details {
+        font-size: 13px;
+      }
+    }
+  }
+}

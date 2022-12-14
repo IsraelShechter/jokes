@@ -1,0 +1,19 @@
+
+  <form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <h1>Login</h1>
+    <div>
+      <input formControlName="email" placeholder="Email">
+      <div [hidden]="email!.valid "
+       class="error">Reqired Field</div>
+    </div>
+    <div>
+
+      <input formControlName="password" placeholder="Password">
+      <div [hidden]="password!.valid "
+      class="error">Reqired Field</div>
+    </div>
+    <button type="submit" [disabled]="!loginForm.valid">Sign In</button>
+    <div [hidden]="!isLoginErr"
+       class="error">Email or Password is not correct - tip: try user@gmail.com, Aa123456!</div>
+  </form>
+

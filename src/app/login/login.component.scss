@@ -1,0 +1,42 @@
+:host {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .form {
+    display: block;
+    height: 50%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #eee;
+    padding: 20px;
+    border-radius: 5px;
+    div, h1, button {
+      height: 10%;
+    }
+    button {
+      background: #0095ff;
+      color: #fff;
+      &[disabled] {
+        cursor: not-allowed;
+      }
+
+    }
+    input {
+      padding-left: 20px;
+      height: 100%;
+      width: calc(100% - 27px);
+    }
+    .error{
+      color: red;
+      padding-top: 4px;
+
+    }
+  }
+}

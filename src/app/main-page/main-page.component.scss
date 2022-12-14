@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+
+    .joke-card {
+      padding-bottom: 10px;
+      cursor: pointer;
+      height: 133px;
+
+      .mat-mdc-card-footer {
+        padding-left: 10px;
+      }
+      .mat-mdc-chip {
+        pointer-events: none;
+      }
+    }
+}

@@ -1,0 +1,26 @@
+
+  <mat-card >
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>{{joke?.id}}</mat-card-title>
+        <mat-card-subtitle>{{joke?.category}}</mat-card-subtitle>
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+      <p *ngIf="joke?.type == 'single'">{{joke?.joke}}</p>
+      <p *ngIf="joke?.type == 'twopart'">{{joke?.setup}}</p>
+      <p *ngIf="joke?.type == 'twopart'">{{joke?.delivery}}</p>
+    </mat-card-content>
+    <mat-card-footer>
+      <h2>Suggested Jokes</h2>
+      <div class="suggested-container" >
+        <div class="suggested-joke" *ngFor="let s of suggestedJokes" (click)="goToSuggested(s)">
+          <span class="joke-id">{{s.id}}</span>
+          <span class="suggested-details">
+
+            A joke of category {{s.category}}  {{getAletsDesc(s)}}
+          </span>
+        </div>
+      </div>
+    </mat-card-footer>
+  </mat-card>
